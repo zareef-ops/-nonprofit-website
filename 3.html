@@ -1,0 +1,12 @@
+function submitForm(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name && email && message) {
+        document.getElementById("responseMsg").innerText = "Thank you for contacting us!";
+    } else {
+        document.getElementById("responseMsg").innerText = "Please fill out all fields.";
+    }
+}
